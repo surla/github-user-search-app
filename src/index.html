@@ -10,18 +10,44 @@
       sizes="32x32"
       href="../assets/favicon-32x32.png"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link href="./index.css" rel="stylesheet" />
     <title>GitHub user search app</title>
   </head>
-  <body>
-    <header>
-      <h1 class="text-3xl font-bold underline">devfinder</h1>
-      <span>Light</span>
-      <span>Dark</span>
-    </header>
-    <div>
-      <input type="text" placeholder="  Search GitHub username..." />
-      <button>Search</button>
+  <body
+    class="bg-[#F6F8FF] h-screen justify-center items-center font-mono flex"
+  >
+    <div class="w-730 align-middle">
+      <header class="flex justify-between mb-8">
+        <h1 class="text-2xl text-[#222731] font-bold">devfinder</h1>
+        <div>
+          <span class="text-[#697C9A]">Dark</span>
+          <img class="inline" src="../assets/icon-moon.svg" alt="" />
+        </div>
+      </header>
+      <main>
+        <div
+          class="h-16 flex justify-between items-center bg-white px-4 rounded-lg mb-5"
+        >
+          <div class="flex items-center">
+            <img class="w-6 h-6" src="../assets/icon-search.svg" alt="" />
+            <input
+              class="text-[4B6A9B] w-96 p-3"
+              type="text"
+              placeholder="Search GitHub username..."
+            />
+          </div>
+          <button class="h-12 w-24 bg-[#0079FF] rounded-lg text-white">
+            Search
+          </button>
+        </div>
+      </main>
     </div>
   </body>
 </html>
