@@ -23,7 +23,7 @@
   <body
     class="bg-[#F6F8FF] h-screen justify-center items-center font-mono flex"
   >
-    <div class="w-730 align-middle">
+    <div class="align-middle w-730">
       <header class="flex justify-between mb-8">
         <h1 class="text-2xl text-[#222731] font-bold">devfinder</h1>
         <div>
@@ -33,66 +33,70 @@
       </header>
       <main>
         <div
-          class="h-16 flex justify-between items-center bg-white px-4 rounded-lg mb-5"
+          class="flex items-center justify-around h-16 mb-5 bg-white rounded-2xl drop-shadow-lg"
         >
-          <div class="flex items-center">
+          <form class="flex items-center pl-6">
             <img class="w-6 h-6" src="../assets/icon-search.svg" alt="" />
             <input
-              class="text-[4B6A9B] w-96 p-3"
+              class="text-[4B6A9B] w-[425px] px-6 focus:outline-none"
               type="text"
               placeholder="Search GitHub username..."
             />
-          </div>
-          <button class="h-12 w-24 bg-[#0079FF] rounded-lg text-white">
+
+          <span class="px-5 text-sm font-bold text-red-600 w-36"id="no-results"></span>
+          <button class="h-12 w-24 px-4  text-sm bg-[#0079FF] rounded-2xl text-white">
             Search
           </button>
+        </form>
         </div>
-        <div class="rounded-lg bg-white flex p-10 justify-between">
-          <div>Profile picture</div>
+        <div class="flex justify-between p-10 bg-white rounded-2xl drop-shadow-lg">
+          <div class="w-[117px] h-[117px]" id="avatar_url"></div>
           <div class="w-[500px]">
-            <div class="flex justify-between items-center">
-              <p class="text-2xl font-bold">The Octocat</p>
-              <p class="text-[#697C9A]">Joined 25 Jan 2011</p>
+            <div class="flex items-center justify-between">
+              <p class="text-2xl font-bold" id="name"></p>
+              <p class="text-[#697C9A]" id="created_at">Joined 25 Jan 2011</p>
             </div>
-            <p class="text-[#0079FF]">@octocat</p>
-            <p class="text-[#4B6A9B] py-5">This profile has no bio</p>
+            <p id="login">@octocat</p>
+            <p class="text-[#4B6A9B] py-5" id="bio"></p>
             <di
               class="h-[85px] bg-[#F6F8FF] flex justify-around items-center rounded-lg mb-5"
             >
               <div>
                 <p class="text-[#4B6A9B] text-sm">Repos</p>
-                <p class="text-[#2B3442] font-bold">8</p>
+                <p class="text-[#2B3442] font-bold" id="public_repos"></p>
               </div>
               <div>
                 <p class="text-[#4B6A9B] text-sm">Followers</p>
-                <p class="text-[#2B3442] font-bold">3938</p>
+                <p class="text-[#2B3442] font-bold" id="followers"></p>
               </div>
               <div>
                 <p class="text-[#4B6A9B] text-sm">Following</p>
-                <p class="text-[#2B3442] font-bold">9</p>
+                <p class="text-[#2B3442] font-bold" id="following"></p>
               </div>
             </di>
-            <div class="grid grid-cols-2 gap-2">
+            <div class="grid grid-cols-2 gap-x-10 gap-y-2">
               <div>
                 <img src="../assets/icon-location.svg" alt="location" class="inline"/>
-                <span class="text-[#4B6A9B] text-sm">San Francisco</span>
+                <span class="text-[#4B6A9B] text-xs" id="location"></span>
               </div>
               <div>
                 <img src="../assets/icon-twitter.svg" alt="twitter" class="inline"/>
-                <span class="text-[#4B6A9B] text-sm"><span>Not Available</span>
+                <span class="text-[#4B6A9B] text-xs" id="twitter_username"><span></span>
               </div>
               <div>
                 <img src="../assets/icon-website.svg" alt="website" class="inline"/>
-                <span class="text-[#4B6A9B] text-sm">https://github.blog</span>
+                <span class="text-[#4B6A9B] text-xs" id="website"></span>
               </div>
               <div>
                 <img src="../assets/icon-company.svg" alt="company" class="inline"/>
-                <span class="text-[#4B6A9B] text-sm">@github</span>
+                <span class="text-[#4B6A9B] text-xs" id="company"></span>
               </div>
             </div>
           </div>
         </div>
       </main>
     </div>
+
+    <script src="../app.js"></script>
   </body>
 </html>
